@@ -2,13 +2,12 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
-import { ENV } from './src/apps/global/const';
 
 export default defineConfig(({ mode }) => {
 	const isProd = mode === 'production';
 
 	return {
-		base: isProd ? `/${ENV.REPO_NAME}/` : '/',
+		base: isProd ? '/n8n-test-front-end-page/' : '/',
 		plugins: [tailwindcss(), react()],
 		resolve: {
 			alias: {
