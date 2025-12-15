@@ -1,5 +1,5 @@
 import { Route, createRoutesFromElements } from 'react-router-dom';
-import { Layout, LiffLoginGuard } from '@/apps/layouts';
+import { Layout } from '@/apps/layouts';
 import { ExamplePage } from '@/apps/pages';
 
 const routes = createRoutesFromElements(
