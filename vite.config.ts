@@ -4,10 +4,10 @@ import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 
 export default defineConfig(({ mode }) => {
-	const isProd = mode === 'production';
+	// const isProd = mode === 'production';
 
 	return {
-		base: isProd ? '/n8n-test-front-end-page/' : '/',
+		base: '/n8n-test-front-end-page/',
 		plugins: [tailwindcss(), react()],
 		resolve: {
 			alias: {
