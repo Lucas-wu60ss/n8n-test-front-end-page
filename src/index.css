@@ -1,0 +1,24 @@
+/*  FOR TAILWIND （使用 Tailwind 將註解打開） */
+
+/* @import 'tailwindcss'; */
+
+@font-face {
+	font-family: 'Satisfy';
+	src: url('../src/assets/fonts/Satisfy-Regular.ttf') format('truetype');
+	font-weight: normal;
+}
+
+body {
+	overflow: hidden; /* 勿刪除，用於解決ios底部會留白的問題 */
+	height: 100svh; /* 勿刪除，用於解決ios底部會留白的問題 */
+	font-size: 10vw; /* 範例 */
+	font-family: 'Satisfy'; /* 範例 */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+	object-fit: contain;
+}

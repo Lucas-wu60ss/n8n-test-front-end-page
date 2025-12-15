@@ -1,0 +1,15 @@
+.examplePage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #dbdbdb;
+	height: 100%;
+	padding: 5vw;
+	overflow-y: auto;
+	margin-top: 22.5vw;
+
+	img {
+		width: 50vw;
+		height: 50vw;
+	}
+}
