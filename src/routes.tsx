@@ -4,11 +4,11 @@ import { ExamplePage } from '@/apps/pages';
 
 const routes = createRoutesFromElements(
 	<Route>
-		<Route path="" element={<LiffLoginGuard />}>
-			<Route path="/" element={<Layout />}>
-				<Route index element={<ExamplePage />} />
-			</Route>
+		{/* <Route path="" element={<LiffLoginGuard />}> */}
+		<Route path="/" element={<Layout />}>
+			<Route index element={<ExamplePage />} />
 		</Route>
+		{/* </Route> */}
 	</Route>,
 );
 
