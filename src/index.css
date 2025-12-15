@@ -1,6 +1,7 @@
 /*  FOR TAILWIND （使用 Tailwind 將註解打開） */
 
 /* @import 'tailwindcss'; */
+@import '@mantine/core/styles.css';
 
 @font-face {
 	font-family: 'Satisfy';
