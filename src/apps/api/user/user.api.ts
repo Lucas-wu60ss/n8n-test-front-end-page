@@ -19,7 +19,7 @@ export namespace UserApi {
 		formData.append('file', file);
 		formData.append('filename', file.name);
 
-		return apiClientInstance.post('/upload-image', formData, {
+		return apiClientInstance.post('/upload-image-v2', formData, {
 			headers: {
 				'Content-Type': 'multipart/form-data',
 			},

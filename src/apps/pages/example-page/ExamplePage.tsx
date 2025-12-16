@@ -9,6 +9,7 @@ function ExamplePage() {
 	const [imageFile, setImageFile] = useState<File | null>(null);
 	const [imagePreview, setImagePreview] = useState<string | null>(null);
 	const [isUploading, setIsUploading] = useState(false);
+	const [data, setData] = useState<any>(null);
 
 	// 處理圖片選擇
 	const handleImageChange = (file: File | null) => {
@@ -38,7 +39,7 @@ function ExamplePage() {
 		try {
 			// 使用 UserApi 上傳圖片
 			const response = await UserApi.uploadImage(imageFile);
-
+			setData(response.data.description);
 			console.log('完整回應:', response);
 			console.log('回應資料:', response.data);
 			console.log('回應狀態:', response.status);
@@ -47,10 +48,10 @@ function ExamplePage() {
 			if (response.data) {
 				const message = response.data.message || '圖片上傳成功！';
 				const filename = response.data.filename || imageFile.name;
-				alert(`${message}\n檔案名稱: ${filename}`);
+				// alert(`${message}\n檔案名稱: ${filename}`);
 				console.log('上傳成功 - 完整資料:', response.data);
 			} else {
-				alert('圖片上傳成功！（無回應資料）');
+				// alert('圖片上傳成功！（無回應資料）');
 				console.warn('警告：回應資料為空');
 			}
 
@@ -89,6 +90,8 @@ function ExamplePage() {
 					<Button onClick={handleUploadImage} disabled={!imageFile || isUploading} loading={isUploading}>
 						{isUploading ? '上傳中...' : '上傳到 n8n'}
 					</Button>
+
+					<Text>{data}</Text>
 				</div>
 			</div>
 		</>
