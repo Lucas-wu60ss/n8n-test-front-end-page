@@ -16,13 +16,11 @@ export namespace UserApi {
 
 	export function uploadImage(file: File) {
 		const formData = new FormData();
-		formData.append('file', file);
-		formData.append('filename', file.name);
+		formData.append('file', file, file.name); // 建議把檔名放在第三參數
 
 		return apiClientInstance.post('/upload-image-v2', formData, {
-			headers: {
-				'Content-Type': 'multipart/form-data',
-			},
+			headers: { 'Content-Type': 'multipart/form-data' },
+			responseType: 'json', // ✅ 確保不要變 Blob
 		});
 	}
 }
